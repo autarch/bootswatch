@@ -7834,12 +7834,6 @@ h3.widget-title {
   margin-top: 0;
 }
 
-article h2,
-article h3,
-article h4 {
-  clear: none;
-}
-
 .posts article {
   padding-top: 20px;
   margin-top: 20px;
@@ -8056,10 +8050,7 @@ img.content-right {
 }
 
 .btn {
-  background-image: none;
-  background-repeat: no-repeat;
   border-radius: 0;
-  filter: none;
 }
 
 table.table-borderless th,
