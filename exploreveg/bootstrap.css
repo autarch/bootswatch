@@ -7848,6 +7848,7 @@ h3.widget-title {
 }
 
 figure figcaption {
+  padding: 5px;
   margin: 8px -4px 0 -4px;
   font-size: 85%;
   border-top: 1px solid #ddd;
@@ -7858,9 +7859,9 @@ figure figcaption {
 }
 
 #breadcrumbs {
-  display: inline;
+  display: inline-block;
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   font-size: 90%;
   list-style: none;
 }
