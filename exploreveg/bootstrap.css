@@ -7980,6 +7980,10 @@ img.content-right {
   border-radius: 0;
 }
 
+.ekko-lightbox .modal-footer {
+  text-align: left;
+}
+
 /* Various standard WordPress styles */
 
 figure {
