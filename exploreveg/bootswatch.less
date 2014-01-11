@@ -2,16 +2,14 @@
 @import "bootstrap-lightbox.less";
 
 body {
-    background-color: @grayLighter;
-    font-family: @sansFontFamily;
-    font-size: 16px;
+    background-color: @gray-lighter;
+    font-family: @font-family-sans-serif;
     padding-bottom: 10px;
 }
 
 div.main {
     background-color: @white;
     margin-bottom: 0;
-    padding: 0px 20px 0px 20px;
 }
 
 #site-header {
@@ -27,25 +25,25 @@ div.main {
     #logo {
         display: inline;
         float: left;
-        height: 100px;
-        width: 165px;
+        height: 121px;
+        width: 200px;
     }
 
     #name-and-tagline {
         clear: none;
-        margin-left: 180px;
+        margin-left: 210px;
 
         h1 {
             clear: none;
             font-family: "Questrial", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 46px;
             font-weight: normal;
-            line-height: 25px;
+            line-height: 54px;
             margin-bottom: 2px;
-            margin-top: 35px;
+            margin-top: 45px;
 
             a {
-                color: @textColor;
+                color: @text-color;
 
                 &:hover {
                     text-decoration: none;
@@ -53,64 +51,60 @@ div.main {
             }
         }
 
-        h2 {
+        #tagline {
             clear: none;
-            color: @caaBlue;
-            font-size: 24px;
+            color: @caa-blue;
+            font-size: 26px;
             font-style: italic;
             font-weight: normal;
             margin-bottom: 0px;
-            margin-top: 0px;
-            text-align: right;
+            @media (min-width: @screen-md-min) {
+                margin-left: 22em;
+            }
+            margin-top: 5px;
         }
     }
 }
 
 #global-nav {
-    font-family: @sansFontFamily;
-    margin-top: 10px;
-    margin-left: (@gridGutterWidth * -1);
-    margin-right: (@gridGutterWidth * -1);
-
-    .navbar-inner {
-        border-radius: 0;
-        padding-left: 0;
+    @media (min-width: @screen-md-min) {
+        .flush-with-container();
     }
+    border-radius: 0;
+    clear: both;
+    font-family: @font-family-sans-serif;
+    margin-top: 25px;
+    padding-left: 0;
 
-    .nav {
-        margin-left: 5px;
-
+    .navbar-nav {
         li {
-            font-size: 18px;
             font-weight: bold;
 
-            a {
-                line-height: 28px;
+            @media (min-width: @screen-md-min) {
+                font-size: 18px;
+
+                a {
+                    line-height: 28px;
+                }
             }
 
             &:hover {
-                background-color: darken(@caaBlue, 10%);
+                background-color: darken(@caa-blue, 10%);
             }
         }
     }
 
-    /* Bootstrap adds a box-shadow effect that we want to remove */
-    .nav > .active > a,
-    .nav > .active > a:hover,
-    .nav > .active > a:focus {
-        -webkit-box-shadow: none !important;
-        -moz-box-shadow: none !important;
-        box-shadow: none !important;
-    }
-
     form {
-        /* The default top margin pushes the form down past the middle of the navbar-inner */
-        margin-top: 2px;
-        /* the padding and width seem to make it line up with the right-side nav below it */
-        padding-left: 19px;
+        border: 0;
+        @media (min-width: @screen-md-min) {
+            /* The default top margin pushes the form down past the middle of the navbar-inner */
+            margin-top: 2px;
+            /* the padding and width seem to make it line up with the right-side nav below it */
+            padding-left: 19px;
 
-        input {
-            width: 162px;
+            input {
+                width: 162px;
+            }
         }
     }
 }
@@ -118,15 +112,15 @@ div.main {
 #front-page-photos {
     height: 449px;
     width: 700px;
-
-    .carousel-caption {
-        color: white;
-    }
 }
 
 #front-page-content {
     h2 {
         .separator();
+
+        &:first-child {
+            margin-top: 20px;
+        }
     }
 
     h3.event-date {
@@ -139,15 +133,16 @@ div.main {
 }
 
 #right-nav {
-    background-color: @caaGray;
-    color: @grayDarker;
+    background-color: @caa-gray;
+    color: @gray-darker;
+    margin-bottom: 20px;
 
     h2 {
-        background-color: @caaGreen;
+        background-color: @caa-green;
         color: @white;
         font-size: 18px;
         margin: 10px 0 7px 0;
-        padding: 0px 15px 0px 15px;
+        padding: 10px 15px 10px 15px;
         text-align: center;
 
         a, a:hover, a:visited {
@@ -178,10 +173,11 @@ div.main {
             input[type="text"],
             input[type="email"] {
                 width: 170px;
+                margin-bottom: 5px;
             }
 
             input[type="submit"] {
-                font-family: @sansFontFamily;
+                font-family: @font-family-sans-serif;
             }
 
             .ajax-loader {
@@ -213,15 +209,15 @@ div.main {
     .event {
         h3.date {
             color: @gray;
-            font-size: 12px;
-            line-height: 12px;
+            font-size: 14px;
+            line-height: 14px;
             margin-bottom: 2px;
             margin-top: 0;
         }
 
         h3.event {
-            font-size: 16px;
-            line-height: 18px;
+            font-size: 18px;
+            line-height: 20px;
             margin-bottom: 15px;
             margin-top: 0;
         }
@@ -351,27 +347,28 @@ p.byline {
 
 footer {
     color: @white;
-    margin-left: (@gridGutterWidth * -1);
-    margin-right: (@gridGutterWidth * -1);
-    margin-top: 20px;
+    @media (min-width: @screen-md-min) {
+        .flush-with-container();
+    }
 
     a {
         color: @white;
 
         &:hover {
-            color: @grayLighter;
+            color: @gray-lighter;
         }
     }
 
     #footer-nav {
-        background-color: @caaBlue;
-        padding: 10px @gridGutterWidth;
+        background-color: @caa-blue;
+        padding: 10px (@grid-gutter-width / 2);
 
         ul {
             font-weight: bold;
             list-style: none;
             margin-bottom: 0;
             margin-left: 0;
+            padding-left: 0;
 
             li {
                 display: inline;
@@ -391,9 +388,9 @@ footer {
     }
 
     #colophon {
-        background-color: @caaGreen;
+        background-color: @caa-green;
         font-size: 15px;
-        padding: 10px @gridGutterWidth;
+        padding: 10px (@grid-gutter-width / 2);
 
         #copyright {
             font-size: 13px;
@@ -412,7 +409,7 @@ img.content-right {
 }
 
 .sidekick-unit {
-    background-color: @caaGray;
+    background-color: @caa-gray;
     border-radius: 6px;
     font-size: 13px;
     line-height: 19px;
@@ -431,7 +428,7 @@ img.content-right {
         }
 
         p {
-            margin: 0 0 @baseLineHeight / 2;
+            margin: 0 0 @line-height-base / 2;
 
             &:first-child {
                 margin-top: 0;
@@ -451,8 +448,27 @@ img.content-right {
     }
 }
 
-.separator {
-    border-top: 12px solid @caaGray;
+.side-note {
+    background-color: @caa-gray;
+    border: 1px solid @gray-darker;
+    color: @gray-darker;
+    font-size: 90%;
+    padding: 10px;
+}
+
+.btn {
+    border-radius: 0px;
+    .kill-gradient();
+}
+
+table.table-borderless {
+    th, td {
+        border: 0;
+    }
+}
+
+.separator() {
+    border-top: 12px solid @caa-gray;
     margin-top: 20px;
     padding-top: 20px;
 
@@ -461,14 +477,6 @@ img.content-right {
         margin-top: 0;
         padding-top: 0;
     }
-}
-
-.side-note {
-    background-color: @caaGray;
-    border: 1px solid @grayDarker;
-    color: @grayDarker;
-    font-size: 90%;
-    padding: 10px;
 }
 
 .kill-gradient() {
@@ -482,13 +490,28 @@ img.content-right {
     filter: none;
 }
 
-.btn {
-    border-radius: 0px;
-    .kill-gradient();
+.flush-with-container() {
+    margin-left: -1 * (@grid-gutter-width / 2);
+    margin-right: -1 * (@grid-gutter-width / 2);
 }
 
-table.table-borderless {
-    th, td {
-        border: 0;
-    }
+/* Various standard WordPress styles */
+
+figure {
+    margin:0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
 }
