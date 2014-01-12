@@ -7948,6 +7948,11 @@ img.content-right {
   margin-bottom: 0;
 }
 
+.sidekick-unit.big {
+  font-size: 20px;
+  line-height: 27px;
+}
+
 #social-buttons {
   overflow: hidden;
 }
