@@ -424,8 +424,18 @@ img.content-right {
 }
 
 .sidekick-unit.big {
+    background-color: @caa-green;
+    color: white;
     font-size: 20px;
     line-height: 27px;
+
+    blockquote {
+        border-left: 5px solid darken(@caa-green, 10%);
+
+        small {
+            color: @gray-lighter;
+        }
+    }
 }
 
 #social-buttons {
