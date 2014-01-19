@@ -7619,9 +7619,9 @@ div.main {
   }
 }
 
-#front-page-photos {
-  width: 700px;
-  height: 449px;
+#front-page-photos img {
+  max-height: 483px;
+  margin: 0 auto;
 }
 
 #front-page-content h2 {
