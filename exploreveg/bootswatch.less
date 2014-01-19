@@ -173,7 +173,19 @@ div.main {
 
             input[type="text"],
             input[type="email"] {
-                width: 170px;
+                /* When the right nav stacks below the main content,
+                   this can be as wide as the screen. When the right
+                   nav first moves to the right, we need a smaller
+                   input which can grow a bit once the screen gets bigger. */
+                @media (max-width: @screen-xs-min) {
+                    width: auto;
+                }
+                @media (min-width: @screen-sm-min) {
+                    width: 120px;
+                }
+                @media (min-width: @screen-md-min) {
+                    width: 170px;
+                }
                 margin-bottom: 5px;
             }
 
@@ -184,6 +196,10 @@ div.main {
             .ajax-loader {
                 display: none;
             }
+        }
+
+        .btn {
+            white-space: normal;
         }
 
         a, button, input[type="submit"] {
