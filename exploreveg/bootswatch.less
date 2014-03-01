@@ -99,6 +99,15 @@ div.main {
         margin: 0 auto;
     }
 
+    .carousel-control {
+        &.left {
+            #gradient > .horizontal(@start-color: rgba(0,0,0,.07); @end-color: rgba(0,0,0,.0001));
+        }
+        &.right {
+            #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.07));
+        }
+    }
+
     .carousel-caption {
         background-color: @gray-darker;
         left: 10%;
