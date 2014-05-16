@@ -80,7 +80,7 @@ div.main {
 
     form {
         border: 0;
-        @media (min-width: @screen-md-min) {
+        @media (min-width: @screen-lg-min) {
             /* The default top margin pushes the form down past the middle of the navbar-inner */
             margin-top: 2px;
             /* the padding and width seem to make it line up with the right-side nav below it */
@@ -88,6 +88,13 @@ div.main {
 
             input {
                 width: 162px;
+            }
+        }
+
+        #search-button {
+            display: none;
+            @media (min-width: @screen-lg-min) {
+                display: inline;
             }
         }
     }
