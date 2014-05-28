@@ -470,6 +470,14 @@ img.content-right {
     margin-left: 20px;
 }
 
+.inline blockquote {
+    margin: 0 0 floor(@line-height-computed / 2);
+
+    p {
+        font-size: @font-size-base;
+        line-height: @line-height-base;
+    }
+}
 
 .sidekick-unit {
     background-color: @caa-gray;
@@ -491,7 +499,7 @@ img.content-right {
         }
 
         p {
-            margin: 0 0 @line-height-base / 2;
+            margin: 0 0 floor(@line-height-computed / 2);
 
             &:first-child {
                 margin-top: 0;
