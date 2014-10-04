@@ -305,6 +305,14 @@ header {
     font-size: 90%;
 }
 
+.entry-content {
+    @media (max-width: @screen-xs-min) {
+        .alignright {
+            float: none;
+        }
+    }
+}
+
 .entry-content > h3,
 .entry-content #featured-image-lightbox + h3 {
     margin-top: 0;
