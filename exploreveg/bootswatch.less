@@ -270,13 +270,16 @@ div.main {
                    nav first moves to the right, we need a smaller
                    input which can grow a bit once the screen gets bigger. */
                 @media (max-width: @screen-xs-min) {
-                    width: auto;
+                    width: 180px;
                 }
-                @media (min-width: @screen-sm-min) {
+                @media (max-width: @screen-md-min) {
+                    width: 220px;
+                }
+                @media (max-width: @screen-lg-min) {
                     width: 120px;
                 }
-                @media (min-width: @screen-md-min) {
-                    width: 170px;
+                @media (min-width: @screen-lg-min) {
+                    width: 220px;
                 }
                 margin-bottom: 5px;
             }
