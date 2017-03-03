@@ -392,10 +392,29 @@ header {
         }
     }
 
-    @media (max-width: @screen-lg-min) {
+    iframe {
+        height: auto;
+        width: auto;
+    }
+
+    @media (min-width: @screen-sm-min) {
         iframe {
-            height: 281px !important;
-            width: 500px !important;
+            height: 281px;
+            width: 500px;
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        iframe {
+            height: 382px;
+            width: 680px;
+        }
+    }
+
+    @media (min-width: @screen-lg-min) {
+        iframe {
+            height: 466px;
+            width: 830px;
         }
     }
 }
