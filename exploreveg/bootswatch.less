@@ -762,8 +762,25 @@ img.content-right {
             }
         }
 
+        div.crm-public-footer {
+            display: none;
+        }
+        /* Text boxes end up with no horizontal padding, which looks quite odd */
         input[type="text"], input[type="password"], input[type="email"] {
-            padding: 0px;
+            padding-left: 4px !important;
+            padding-right: 4px !important;
+        }
+        /* This fixes the problem where radio buttons are too close horizontally to the button labels */
+        input[type="radio"] {
+            margin: 0px 6px 0px;
+        }
+        /* This fixes the problem where a radio group's label is misaligned vertically with the radio group to their right */
+        div.label + div.content > input[type="radio"] {
+            margin-top: 8px;    
+        }
+
+        #crm-submit-buttons {
+            padding-bottom: 8px;
         }
     }
 }
