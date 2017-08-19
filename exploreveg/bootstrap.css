@@ -7957,6 +7957,11 @@ div.main {
   width: 100%;
 }
 
+#right-nav .mimi_field h2 {
+  color: inherit;
+  background-color: transparent;
+}
+
 #right-nav .event h3.date {
   margin-top: 0;
   margin-bottom: 2px;
