@@ -39,8 +39,12 @@ div.main {
     }
 
     #tcvf-logo {
-        width: 900px;
-        height: 560px;
+        //width: 450px;
+        //height: 280px;
+        width: 538px;
+        height: 204px;
+	display: block;
+    	margin: 0 auto;
 
         @media (max-width: @screen-md-min) {
             width: 262px;
@@ -705,8 +709,13 @@ img.content-right {
 }
 
 /* TCVF site styles */
-
+@font-face {
+    src: url(Market_Web_Regular.ttf);
+    font-family: market;
+}
 #tcvf-schedule {
+    font-family: market;
+    text-transform: uppercase;
     th, td {
         padding: 5px;
     }
