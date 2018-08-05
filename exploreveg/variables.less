@@ -14,17 +14,20 @@
 @gray-dark:             #333;
 @gray:                  #555;
 @gray-light:            #999;
-@gray-lighter:          #eee;
+//@gray-lighter:          #eee;
+@gray-lighter:          #faf7f0; // Merino
 @white:                 #fff;
 
 
 // CAA colors
 // -------------------------
-@caa-blue:              #5cb7b4;
-@caa-green:             #8ab95b;
-@caa-gray:              #eeefef;
-@caa-brown:             #7c4613;
-
+@caa-blue:              #f15b27; // Flamingo
+@caa-green:             #02b3c5; // Pacific Blue //#f8981d; // Tree Poppy
+//@caa-gray:              #eeefef; //#1e5fac; // Fun Blue 
+@caa-gray:          	#faf7f0; // Merino
+@caa-brown:             #7c4613; //#02b3c5; // Pacific Blue
+@caa-tree-poppy:	#F8981D; // Tree Poppy
+@caa-pacific-blue:	#02B3C5;
 // Brand colors
 // -------------------------
 @brand-primary:         @caa-blue;
@@ -40,14 +43,16 @@
 
 // Links
 // -------------------------
-@link-color:            @caa-blue;
+@link-color:            @caa-pacific-blue;
 @link-color-hover:      darken(@link-color, 15%);
 
 
 // Typography
 // -------------------------
-@font-family-sans-serif:  Gudea, "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//@font-family-sans-serif:  Gudea, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  Josefin SANS-SERIF, Gudea, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Crimson, Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @font-size-base:          16px;
@@ -128,7 +133,8 @@
 @btn-default-border:             @link-color;
 
 @btn-primary-color:              #fff;
-@btn-primary-bg:                 @brand-primary;
+//@btn-primary-bg:                 @brand-primary;
+@btn-primary-bg:                 @caa-tree-poppy;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 @btn-success-color:              #fff;
